@@ -2,7 +2,7 @@ syntax on
 set nobackup "取消备份"
 set noswapfile
 set wildmenu "按TAB键时命令行自动补齐"
-set number "显示行号"
+set number relativenumber "显示行号"
 imap jk <Esc>
 set ruler "显示当前光标位置"
 set mouse=a "开启鼠标支持"
@@ -21,6 +21,13 @@ set t_Co=256
 set encoding=utf-8
 set noerrorbells visualbell t_vb=   "防止闪屏响铃"
 autocmd GUIEnter * set visualbell t_vb=
+"============"
+"设置语法折叠"
+"============"
+set foldenable              " 开始折叠
+set foldmethod=marker       " 设置括号折叠
+set foldcolumn=3
+set foldlevel=1
 
 "============"
 "  VIM-PLUG  "
@@ -38,7 +45,7 @@ Plug 'git://github.com/airblade/vim-gitgutter.git'
 Plug 'git://github.com/mtdl9/vim-log-highlighting.git' 
 Plug 'git://github.com/tpope/vim-fugitive.git'
 Plug 'git://github.com/jistr/vim-nerdtree-tabs.git'
-Plug 'git://github.com/altercation/vim-colors-solarized.git'
+Plug 'git://github.com/junegunn/gv.vim.git'
 call plug#end()
 
 "==============="
