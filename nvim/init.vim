@@ -2,10 +2,10 @@ syntax on
 set nobackup "取消备份"
 set noswapfile
 set wildmenu "按TAB键时命令行自动补齐"
-set number relativenumber "显示行号"
+set number norelativenumber "显示行号"
 imap jk <Esc>
 set ruler "显示当前光标位置"
-set mouse=a "开启鼠标支持"
+set mouse-=a "开启鼠标支持"
 filetype on "启动文件类型检查"
 set cindent "c/c++自动缩进"
 set expandtab
@@ -55,7 +55,7 @@ if !exists('g:airline_symbols')
 endif
 let g:airline_symbols.linenr = '  LN:'
 let g:airline_symbols.maxlinenr = '  '
-let g:airline_symbols.branch = '  ⎇ :'
+let g:airline_symbols.branch = '  branch:'
 let g:airline_symbols.colnr= ' CN:'
 set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
